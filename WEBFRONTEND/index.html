@@ -1,0 +1,713 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="stylesheet" n href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .header {
+            background-image: url(header.jpg);
+            width: 100%;
+
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header>.overlay {
+            background: black;
+            opacity: 0.5;
+        }
+
+        .darken {
+            background-color: black;
+            opacity: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 60px;
+        }
+
+        .menu {
+            width: 80px;
+            height: 30px;
+            background-color: white;
+            cursor: pointer;
+            font-family: "Muli";
+            ;
+        }
+
+        .linked {
+            width: 80px;
+            height: 30px;
+            background-color: white;
+            cursor: pointer;
+            font-family: "Muli";
+            background-color: transparent;
+            border-width: 0;
+            border-style: none;
+        }
+
+        .menu:hover {
+            color: olive;
+            cursor: pointer;
+        }
+
+        .button2 {
+            background-color: darkcyan;
+            border: none;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            transition-duration: 0.5s;
+            height: 50px;
+
+        }
+
+        .button2:hover {
+            background-color: black;
+            cursor: pointer;
+        }
+
+        .slide {
+            width: 87%;
+            height: 750px;
+            display: none;
+            background-size: cover;
+            position: relative;
+            background-position: center;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            position: relative;
+            transition: .5s;
+            cursor: pointer;
+
+        }
+
+        .slide:hover {
+            background-color: black;
+
+        }
+
+        .slide:hover #box4 {
+            background-color: rgb(3, 59, 78);
+
+            transition: 0.3s;
+        }
+
+        .slide:hover #box5 {
+
+
+            border-color: white;
+            border-width: 3px;
+            border-style: solid;
+
+            color: white;
+            text-align: center;
+        }
+
+        #box4 {
+            background-color: white;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30%;
+        }
+
+        #box5 {
+            border-color: olive;
+            border-width: 1px;
+            border-style: solid;
+            width: 300px;
+            height: 300px;
+            color: olive;
+            text-align: center;
+            font-size: 3mm;
+            text-align: center;
+        }
+
+        .imgs {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            background-position: center;
+            align-items: center;
+            transition: transform .5s;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .imgs:hover {
+            transform: scale(1.2);
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            background-color: black;
+            opacity: 0.3;
+
+        }
+
+        .imgbox {
+            display: flex;
+            justify-content: center;
+            width: 20%;
+            height: 300px;
+            background-color: black;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .last {
+            background-color: white;
+            height: 40px;
+            width: 15%;
+            cursor: pointer;
+            font-family: "Muli";
+        }
+
+        .last:hover {
+            border-bottom: olive;
+            border-width: 2px;
+            text-decoration-line: underline;
+            text-decoration-color: olive;
+            color: olive;
+        }
+
+        .imgs:hover>.overlay {
+            opacity: 0.5;
+            background-color: black;
+            z-index: 2;
+        }
+
+        #box3 {
+            width: 280px;
+            height: 280px;
+            background-size: cover;
+            position: relative;
+            background-position: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            align-content: center
+        }
+
+        #box3:hover {
+            box-shadow: 5px 10px 100px gray;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .button {
+            background-color: green;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.5s;
+
+        }
+
+        .button:hover {
+            background-color: black;
+            cursor: pointer;
+        }
+
+        #box1 {
+            background-color: white;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box3:hover #box1 {
+            background-color: olive;
+
+            transition: 0.3s;
+        }
+
+        #box2 {
+
+            border-color: olive;
+            border-width: 1px;
+            border-style: solid;
+            width: 170px;
+            height: 70px;
+            color: olive;
+            text-align: center;
+            font-size: 3mm;
+        }
+
+        #box3:hover #box2 {
+
+            border-color: white;
+            border-width: 3px;
+            border-style: solid;
+
+            color: white;
+            text-align: center;
+            font-size: 3mm;
+        }
+
+        .img {
+            z-index: -1;
+            overflow: hidden;
+            display: block;
+            position: relative;
+        }
+
+        .my {
+            background-color: blueviolet;
+            height: 400px;
+            width: 60%;
+            display: flex;
+        }
+
+        .his {
+            background-color: red;
+            height: 600px;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .your {
+            background-color: green;
+            width: 50%;
+            height: 400px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .text {
+            font-family: "Muli";
+        }
+
+        .text.pointer {
+            cursor: pointer;
+        }
+
+        .text:hover {
+            color: olive;
+            cursor: pointer;
+        }
+
+        .dropbtn {
+
+            border-style: none;
+            background-color: white;
+            font-family: "Muli";
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    <script>
+        var i = 0;
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slide");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="darken">
+            <div
+                style="justify-content: space-between; width: 70%; height: 30px; display: flex ; z-index: 0; background-color:  ">
+                <div
+                    style="width:30%; height: 10px; display: flex; justify-content: space-around; align-items:center; background-color: ;">
+                    <div style="background-color:  ; width:8%; height: 10px;  z-index: 5;">
+                        <img class="icon" src="pinterest.png" alt="" style="width:100%;cursor:pointer; height: 30px;">
+                    </div>
+                    <div style="background-color: ; width:8%; height: 10px;  z-index: 5;">
+                        <img class="icon" src="whatsapp.png" alt="" style="width:100%; height: 30px;cursor:pointer;">
+                    </div>
+                    <div style="background-color: ; width:8%; height: 10px;  z-index: 5;">
+                        <img class="icon" src="facebook.png" alt="" style="width:100%; height: 30px;cursor:pointer;">
+                    </div>
+                    <!-- <div style="background-color: ; width:4%; height: 10px;  z-index: 5;">
+                        <img class="icon" src="twitter.png" alt="" style="width:100%; height: 20px;cursor:pointer;">
+                    </div>
+                    <div style="background-color: ; width:4%; height: 10px;  z-index: 5;">
+                        <img class="icon" src="linkedin.png" alt="" style="width:100%; height: 20px;cursor:pointer;">
+                    </div> -->
+                </div>
+                <div style=" display: flex;  border: solid grey; border-width: 1px;">
+
+                    <input placeholder=" Search... "
+                        style="width: 300px; height: 30px; border: none; font-size: 15px;  padding-left: 10px;" />
+
+                    <button style="width: 40px; height: 30px; ; border: none;">
+                        <span class="material-icons" style="font-size: 20px; margin-top: 4px;"> Search </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br> <br>
+    <div
+        style="background-color: ; width:100%; height: 400px; display: flex; align-content: center; justify-content: center;">
+        <img src="logoaayaam.png" alt="" style="height:350px; width:450px; cursor:pointer;">
+    </div>
+    <br>
+    <div
+        style="width:100%; background-color: ; height: 40px; display: flex; align-items: center; justify-content: space-around; justify-content: center;">
+        <div style="width: 70%; height: 50px; display: flex; align-items: center ; justify-content: space-between; ">
+            <div style=" width: 20%; justify-content: center; height: 10px; display: flex; justify-content: left;">
+                <img src="menu.png" alt="" style="width: 20px; height: 20px; cursor: pointer;">
+            </div>
+            <div style="width: 50%; justify-content: center; height: 10px; display: flex; justify-content: center ;">
+                <button class="dropbtn">Home</button>
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown">
+                    <button class="dropbtn">Pages</button>&#9662;
+                    <div class="dropdown-content">
+                        <a href="index.html">home</a>
+                        <a>single post</a>
+                        <a>recipe</a>
+                    </div>
+                </div>
+                <button class="dropbtn">Performances</button>
+                <button class="dropbtn">Blog</button>
+            </div>
+            <div
+                style="background-color: ; width: 10%; justify-content: center; height: 10px; display: flex; justify-content: space-around; ;">
+                <div class="dropbtn">Contact</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div style="display: flex; background-color: ; align-items: center">
+        <button class="button2" onclick="plusDivs(-1)">Previous</button>
+        <div style="background-color:   ; width:100%; height: 750px; display: flex; justify-content: center;">
+            <!-- <button onclick="next()" class="button">Next</button> -->
+            <div class="slide" style="background-image: url(1.jpg); display: block; ">
+                <!-- <div style=" align-items: center; display: flex; justify-content: center; align-content:center">
+                    <div id="box4">
+                        <div id="box5">
+                            <h5 style="color: darkcyan; font-family: Muli;">Street Fest</h5>
+                            <h1 style="color: black; font-family: Muli;">Runthrough</h1>
+                            <h5 style="color:darkcyan ; font-family: Muli;">March, 2020 / BY AAYAAM
+                            </h5>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="slide" style="background-image: url(2.jpg);">
+                <!-- <div style=" align-items: center; display: flex; justify-content: center; align-content:center">
+                    <div id="box4">
+                        <div id="box5">
+                            <h5 style="color: darkcyan; font-family: Muli;">Stage Play</h5>
+                            <h1 style="color: black; font-family: Muli;">Curtain Call</h1>
+                            <h5 style="color:  darkcyan; font-family: Muli;">March, 2020 / BY AAYAAM
+                            </h5>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="slide" style="background-image: url(3.jpg);">
+                <div style=" align-items: center; display: flex; justify-content: center; align-content:center">
+                    <div id="box4">
+                        <div id="box5">
+                            <h5 style="color: darkcyan ; font-family: Muli;">From MAIT</h5>
+                            <h1 style="color: black; font-family: Muli;">WE WELCOME YOU</h1>
+                            <h5 style="color:  darkcyan; font-family: Muli;">AAYAAM
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <img src="1.jpg" alt="" class="slide" style="display: block;">
+        <img src="2.jpg" alt="" class="slide">
+        <img src="3.jpg" alt="" class="slide"> 
+        <img src="4.jpg" alt="" class="slide">
+        <img src="5.jpg" alt="" class="slide"> -->
+            <!-- <button onclick="next()" class="button">Next</button> -->
+        </div>
+        <button class="button2" onclick="plusDivs(+1)">Next</button>
+    </div>
+    <br><br><br>
+    <div
+        style=" width:100%; height: 330px; display: flex; align-items: center; justify-content: space-around; background-color: ;">
+        <div style="width: 60%; height: 400px;  display: flex; align-items: center; justify-content: space-around; ">
+            <div id="box3" style="background-image: url(insta1.jpg);">
+                <div
+                    style=" align-items: center; display: flex; justify-content: center;cursor:pointer; align-content:center">
+                    <div id="box1">
+                        <div id="box2">
+
+                            <h4 style="font-family: Muli;">THE BEST</h4>
+                            <h1 style="font-family: Muli; color: black;line-height: 1px;">Street Plays</h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="box3" style="background-image: url(insta2.jpg);">
+                <div
+                    style="align-items: center; display: flex; justify-content: space-around;cursor:pointer; align-content: space-around;">
+                    <div id="box1">
+                        <div id="box2">
+
+                            <h4 style="font-family: Muli;">THE BEST</h4>
+                            <h1 style="font-family: Muli; color: black;line-height: 1px;">Stage Plays</h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="box3" style="background-image: url(insta6.jpg);">
+                <div
+                    style="align-items: center; display: flex; justify-content: space-around;cursor:pointer; align-content: space-around;">
+                    <div id="box1">
+                        <div id="box2">
+                            <h4 style="font-family: Muli;">THE BEST</h4>
+                            <h1 style="font-family: Muli; color: black;line-height: 1px;">Performers</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div
+        style="background-color:  ; width:100%; height: 900px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; background-color: ;">
+        <div style="background-color: ; width: 60%; height: 350px; display: flex; ">
+            <div
+                style="background-color: ; width: 50%; height: 400px; background-image: url(insta7.jpg); background-size: cover; background-position: center;">
+            </div>
+            <div
+                style="background-color:  ; width: 50%; height: 350px; display: flex; align-items: center; align-content: space-around;  justify-content: space-around;">
+                <div style="background-color:  ; width: 95%; height: 300px; text-align: center; font-family: Muli; ">
+                    <h6 style="font-family: Muli;"></h6>
+                    <h2 class="text">Runthrough 2k20</h2>
+                    <h3 style="font-family: Muli;"></h3>
+                    <p style="font-family: Muli; font-size: 13px">Leaving the house before parents wake up and reaching
+                        back after they're asleep. Living on a diet of Adrak and Chai, looking like a homeless destitute
+                        in those worn out kurtas, and having attendance in every college, except yours.
+                        Par, yahi din toh baad mein yaad aayenge.
+
+                        Aayaam- The Dramatics Society of MAIT is delighted to present to you, the fifth edition of its
+                        Annual Street Play Event, Runthrough'20.
+
+                        The registrations for the preliminary round are now open.
+
+                        To register your play, fill out the form given below:
+                        https://forms.gle/aNtJj88fSouVh4qm6
+
+                        Registrations close on 14th March at 11:59 pm.
+
+                        Performances toh bohot ho gayi, chalo, ek baar firse Runthrough nikaalte hain..</p>
+                    <button type="button" class="button">READ MORE</button>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: ; width: 60%; height: 400px; display: flex; ">
+            <div
+                style="background-color:  ; width: 50%; height: 350px; display: flex; align-items: center; align-content: space-around;  justify-content: space-around;">
+                <div style="background-color:  ; width: 95%%; height: 300px; text-align: center; font-family: Muli;">
+                    <h6 style="font-family: Muli;"></h6>
+                    <h2 class="text">Curtain Call 2k20</h2>
+                    <h3 style="font-family: Muli;"></h3>
+                    <p style="font-family: Muli; font-size: 13px">Nothing is more real than the masks we wear to show
+                        each other who we are. The stage provides an actor with multiple masks to create one's own
+                        identity.
+                        We are delighted to present you another opportunity to discover your identity with us.
+                        Presenting to you, Curtain Call 2k20 - The annual stage play festival of Aayaam.
+
+                        Registration are now open and will close on 14th March, 11:59 p.m. No entries will be
+                        entertained after the deadline.
+
+                        To register please fill the google form given below:
+                        https://docs.google.com/…/1FAIpQLScmku95AQ-9NXz73N…/viewform</p>
+                    <button type="button" class="button">READ MORE</button>
+                </div>
+            </div>
+            <div
+                style="background-color: black; width: 50%; height: 400px; background-image: url(insta8.jpg); background-size: cover; background-position: center; ">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div
+        style="background-color: ; width: 100%; height: 1200px; display: flex; justify-content: center; align-content: center; align-items: center;">
+        <div style="background-color:  ; width: 60%; height: 1000px; display: flex;">
+            <div
+                style="background-color:  ; width: 70%; height: 1000px; display: flex; justify-content: space-around; align-content: space-around; align-items: center; flex-wrap: wrap;">
+                <div
+                    style="background-color: ; width: 90%; height: 280px;display: flex;  justify-content: space-around;  align-items: center; align-content: space-around;">
+                    <img src="9.jpg" alt="" style="width:45% ; height: 280px; background-color: aquamarine; ;">
+                    <div style="text-align: left; width: 40%;">
+                        <h3 style="font-family: Muli;">jwnklgaer</h3>
+                        <h2 class="text">bajlkkjfb</h2>
+                        <h3 style="font-family: Muli;">lkjerulrelq</h3>
+
+                        <p style="font-family: Muli; font-size: 14px;">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Totam,
+                            nemo excepturi? Minima,
+                            tempora? Deleniti eaque nesciunt ipsa fuga veritatis quidem doloribus non, ullam,
+                            consectetur
+                            ducimus dolore exercitationem provident dolores. Officia.</p>
+                    </div>
+                </div>
+                <div
+                    style="background-color: white; width: 90%; height: 280px; display: flex; justify-content: space-around;  align-items: center; align-content: space-around;">
+                    <img src="10.jpg" alt="" style="width:45% ; height: 280px; background-color: aquamarine;;">
+                    <div style="text-align: left; width: 40%;; ">
+                        <h3 style="font-family: Muli;">jwnklgaer</h3>
+                        <h2 class="text">bajlkkjfb</h2>
+                        <h3 style="font-family: Muli;">lkjerulrelq</h3>
+                        <p style="font-family: Muli; font-size: 14px;"> Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Totam,
+                            nemo excepturi? Minima,
+                            tempora? Deleniti eaque nesciunt ipsa fuga veritatis quidem doloribus non, ullam,
+                            consectetur
+                            ducimus dolore exercitationem provident dolores. Officia.</p>
+                    </div>
+                </div>
+                <div
+                    style="background-color: white; width: 90%; height: 280px; display: flex;  justify-content: space-around;  align-items: center; align-content: space-around;">
+                    <img src="11.jpg" alt="" style="width:45% ; height: 280px; background-color: aquamarine;;">
+                    <div style="text-align: left; width: 40%;">
+                        <h3 style="font-family: Muli;">jwnklgaer</h3>
+                        <h2 class="text">bajlkkjfb</h2>
+                        <h3 style="font-family: Muli;">lkjerulrelq</h3>
+                        <p style="font-family: Muli; font-size: 14px;">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Totam,
+                            nemo excepturi? Minima,
+                            tempora? Deleniti eaque nesciunt ipsa fuga veritatis quidem doloribus non, ullam,
+                            consectetur
+                            ducimus dolore exercitationem provident dolores. Officia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="his">
+        <div style="background-color: ; width:100%; height: 300px; display: flex; cursor:pointer;">
+            <div class="imgbox">
+                <img src="insta1.jpg" alt="" class="imgs">
+            </div>
+            <div class="imgbox">
+                <img src="insta2.jpg" alt="" class="imgs">
+            </div>
+            <div class="imgbox">
+                <img src="insta3.jpg" alt="" class="imgs">
+            </div>
+            <div class="imgbox">
+                <img src="insta4.jpg" alt="" class="imgs">
+            </div>
+            <div class="imgbox">
+                <img src="insta5.jpg" alt="" class="imgs">
+            </div>
+        </div>
+        <div style="background-color: ; width:100%; height: 300px; display: flex; cursor:pointer;">
+            <div class="imgbox">
+                <img src="insta6.jpg" alt="" class="imgs">
+            </div>
+            <div class="imgbox">
+                <img src="insta7.jpg" alt="" class="imgs">
+            </div>
+            <div class="imgbox">
+                <img src="insta8.jpg" alt="" class="imgs">
+            </div>
+            <div class="imgbox">
+                <img src="insta9.jpg" alt="" class="imgs">
+            </div>
+            <div class="imgbox">
+                <img src="insta10.jpg" alt="" class="imgs">
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <footer>
+        <header
+            style="background-color: ; width:100%; height: 100px; display: flex; justify-items: space-around ;align-items: center; align-content: space-around; justify-content: space-around;">
+            <div
+                style="width: 70%; height: 80px; display: flex; background-color: white; align-content: center; justify-items: center;align-items: center; justify-content: space-between;">
+                <div style="background-color: ; width: 40%; height: 60px; cursor:pointer;">
+                    <div style="font-family: Muli;">Copyright ©2029 All rights reserved |</div>
+                </div>
+                <div
+                    style="background-color:  ; width: 40%; height: 60px; display: flex; justify-content: space-around ;cursor:pointer;">
+                    <div class="last">
+                        Home
+                    </div>
+                    <div class="last">
+                        Performances
+                    </div>
+                    <div class="last">
+                        About Us
+                    </div>
+                    <div class="last">
+                        Blog
+                    </div>
+                    <div class="last">
+                        Contact
+                    </div>
+                </div>
+            </div>
+        </header>
+    </footer>
+</body>
+
+</html>
